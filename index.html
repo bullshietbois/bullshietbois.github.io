@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title> bullshietbois webpage </title>
+    <link href="style.css" rel="stylesheet" type="text/css">
     <style>
       h1 {
         color: rgb(255,255,255);
@@ -21,13 +22,22 @@
         text-align: center;
       }
 
+      #time-since {
+        color: rgb(255,255,255);
+        position: absolute;
+        top: auto;
+        right: 44%;
+
+      }
+
       #latest-video {
         text-align: center;
       }
 
       #latest-vid-img {
         width: 15%;
-        height: auto;
+        height: 20%;
+        text-align: center;
       }
 
       #yt-link {
@@ -40,22 +50,19 @@
       }
 
       #yt-link:hover {
-        position: absolute;
-        top: 2%;
-        right: 2%;
-        width: 2%;
-        height: auto;
         transform: scale(1.5)
       }
-     
 
+      .containers {
+        color: rgb(255,255,255);
+        
+      }
     </style>
   </head>
+
   <body>
     <h1 class="text"> Welcome to the Bullshiet Universe</h1>
     <p id="Intro-text" class="text"> Follow along on the adventures of 4 bois</p>
-    
-    <p class="text"> New video in X days...</p>
 
     <!-- HERE IS A RANDOM COMMENT SCHESCHESCHE-->
     
@@ -68,6 +75,47 @@
         <img id="yt-link" src="yt.png">
     </a>
 
+    <h2 id="time-since">Time since last video</h2>
+    <!-- Code for the timer -->
+    <div class="container">
+      <div class="launch-time">
+        <div>
+          <p id="days">00</p>
+          <span>Days</span>
+        </div>
+        <div>
+          <p id="hours">00</p>
+          <span>Hours</span>
+        </div>
+        <div>
+          <p id="minutes">00</p>
+          <span>Minutes</span>
+        </div>
+        <div>
+          <p id="seconds">00</p>
+          <span>Seconds</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var countStartDate = new Date("Dec 29, 2023, 19:00:00").getTime();
+      var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distance = now - countStartDate;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+      },1000);
+    </script>
   </body>
 
 
