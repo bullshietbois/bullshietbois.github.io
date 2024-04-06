@@ -10,6 +10,7 @@
       }
 
       body {
+        height:100%;
         background-color: rgb(0,0,0);
       }
 
@@ -24,18 +25,37 @@
         font-size: 3.5vw;
       }
 
-      #time-since {
+      #time-sinceOLD {
+        position: relative;
         color: rgb(255,255,255);
         text-align: center;
-        padding-top: 1%;
-        font-size: 1.7vw;
+        font-size: 2vw;
+        margin-left: 100;
+        margin-right: 100;
+        margin-bottom: -10%
+      }
+
+      #time-since {
+        position: fixed;
+        color: rgb(255,255,255);
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2vw;
       }
 
       #latest-video {
         position: relative;
-        display: flex; 
-        justify-content: center;
+        text-align: center;
+        margin:0 -1.5em;
         z-index: 0.9;
+        width: auto; 
+        height: 200vh;
+        overflow: hidden;
+      }
+      #latest-video iframe{
+       width:50%;
+       transform:scale(1);
       }
 
       #yt-link {
@@ -121,17 +141,21 @@
     <br>
     <br>
     <h1 class="text"> Welcome to the <br> Bullshiet Universe</h1>
-
+    
     <!-- HERE IS A RANDOM COMMENT SCHESCHESCHE-->
     <div id=latest-video>
-    <iframe width="50%" height="400vw" src="https://www.youtube.com/embed/dq9nKpeAzm8?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    <iframe style="position: relative; height: 25%; border: none" src="https://www.youtube.com/embed/dq9nKpeAzm8?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
     </iframe>
     </div>
+
+    
+
     <a target="_blank" href="https://www.youtube.com/@bullshietbois217"> 
         <img id="yt-link" src="images/yt.png">
     </a>
 
     <h2 id="time-since">Time since last video</h2>
+    
     <!-- Code for the timer -->
     <div class="container">
       <div class="launch-time">
