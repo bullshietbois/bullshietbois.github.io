@@ -33,6 +33,8 @@
 
       #latest-video {
         text-align: center;
+        z-index: 0.9;
+        position: relative;
       }
 
       #latest-vid-img {
@@ -61,6 +63,7 @@
         top: 0%;
         right: 25%;
         transform: scaleX(-1);
+        z-index: 1;
       }
       #fredrik {
         width: 10%;
@@ -69,6 +72,7 @@
         top: 55%;
         right: 10%;
         transform: scaleX(-1);
+        z-index: 1;
       }
       #valter {
         width: 15%;
@@ -76,6 +80,7 @@
         position: absolute;
         top: 40%;
         right: 80%;
+        z-index: 1;
       }
       #andre {
         width: 21%;
@@ -83,11 +88,16 @@
         position: absolute;
         top:-5%;
         right: 60%;
+        z-index: 1;
       }
     </style>
   </head>
 
   <body>
+    <img src="images/andreAnkaOLD.png" id="andre">
+    <img src="images/valterAnkaV1.png" id="valter">
+    <img src="images/freddeAnkaV1.png" id="fredrik">
+    <img src="images/bjornAnkaV1.png" id="bjorn">
     <script>
       function rain(){
           let amount = 50;
@@ -119,7 +129,7 @@
     <!-- HERE IS A RANDOM COMMENT SCHESCHESCHE-->
     
     <div id="latest-video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/dq9nKpeAzm8?si=cCa5-SocrYbxaSv2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      <iframe width="700" height="400" src="https://www.youtube.com/embed/dq9nKpeAzm8?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
       </iframe>
     </div>
     <a target="_blank" href="https://www.youtube.com/@bullshietbois217"> 
@@ -167,15 +177,6 @@
 
       },1000);
     </script>
-
-    <img src="images/andreAnkaOLD.png" id="andre">
-    <img src="images/valterAnkaV1.png" id="valter">
-    <img src="images/freddeAnkaV1.png" id="fredrik">
-    <img src="images/bjornAnkaV1.png" id="bjorn">
-
-    <div class="rain front-row"></div>
-      <div class="rain back-row"></div>
-    </div>
 
 
 
