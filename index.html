@@ -15,6 +15,7 @@
 
       #Intro-text {
         color: rgb(0,200,255);
+        font-family: sans-serif;
       }
 
       .text {
@@ -83,21 +84,43 @@
         top:-5%;
         right: 60%;
       }
-
-
     </style>
   </head>
 
   <body>
+    <script>
+      function rain(){
+          let amount = 50;
+          let body = document.querySelector('body');
+          let i = 0;
+          while(i < amount){
+              let drop = document.createElement('i');
+
+              let size = Math.random() * 5;
+              let posX = Math.floor(Math.random() * window.innerWidth);
+              let delay = Math.random() * -20;
+              //duration = Math.random() * 10;
+
+              drop.style.width = 0.2 + size+'px';
+              drop.style.left = posX + 'px';
+              drop.style.animationDelay = delay+'s';
+              //drop.style.animationDuration = duration+'s';
+
+              body.appendChild(drop);
+              i++
+          }
+      }
+
+  rain();
+  </script>
     <h1 class="text"> Welcome to the Bullshiet Universe</h1>
     <p id="Intro-text" class="text"> Four bois going on an adventure</p>
 
     <!-- HERE IS A RANDOM COMMENT SCHESCHESCHE-->
     
     <div id="latest-video">
-      <a  target="_blank" href="https://www.youtube.com/watch?v=dq9nKpeAzm8">
-        <img src="images/bsb.png" id="latest-vid-img">
-      </a>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dq9nKpeAzm8?si=cCa5-SocrYbxaSv2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
     </div>
     <a target="_blank" href="https://www.youtube.com/@bullshietbois217"> 
         <img id="yt-link" src="images/yt.png">
@@ -144,10 +167,21 @@
 
       },1000);
     </script>
+
+    <img src="images/andreAnkaOLD.png" id="andre">
+    <img src="images/valterAnkaV1.png" id="valter">
+    <img src="images/freddeAnkaV1.png" id="fredrik">
+    <img src="images/bjornAnkaV1.png" id="bjorn">
+
+    <div class="rain front-row"></div>
+      <div class="rain back-row"></div>
+    </div>
+
+
+
+
   </body>
-  <img src="images/andreAnkaOLD.png" id="andre">
-  <img src="images/valterAnkaV1.png" id="valter">
-  <img src="images/freddeAnkaV1.png" id="fredrik">
-  <img src="images/bjornAnkaV1.png" id="bjorn">
+  
+
 
 </html>

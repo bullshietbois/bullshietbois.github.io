@@ -1,6 +1,36 @@
 *
 {
-    font-family: 'poppins', 'sans-serif'; 
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', 'sans-serif'; 
+}
+
+
+body{
+  background: #000;
+  overflow: hidden;
+  height: 100%;
+}
+
+i{
+  position: absolute;
+  height: 20%;
+  background: linear-gradient(transparent, #fff);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  animation: animate 2.5s linear infinite;
+}
+
+@keyframes animate
+{
+  0%
+  {
+      transform: translateY(-100%);
+  }
+  100%
+  {
+      transform: translateY(500%);
+  }
 }
 
 .container{
@@ -22,3 +52,4 @@
     font-size: 60px;
     margin-bottom: 5%;
 }
+
